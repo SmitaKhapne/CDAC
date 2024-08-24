@@ -1,0 +1,42 @@
+SNIPPET 2
+
+INCORRECT SNIPPET:
+						public class IncorrectWhileCondition 
+						{
+							public static void main(String[] args) 
+							{
+								int count = 5;
+								while (count = 0) 
+								{
+									System.out.println(count);
+									count--;
+								}
+							}
+						}
+						
+						
+ERROR:  incompatible types: int cannot be converted to boolean
+        while (count = 0) 
+                     ^
+					 
+EXPLAINATION: In while condition, only boolean values are accepted and we are providing int type value as a condition .
+
+CORRECT CODE:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int count = 5;
+							while (count > 0) 
+							{
+								System.out.println(count);
+								count --;
+							}				
+						}
+					}
+				OUTPUT: 5
+				        4
+						3
+						2
+						1
+				  

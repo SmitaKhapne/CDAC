@@ -1,0 +1,30 @@
+SNIPPET 6
+
+CORRECT SNIPPET:
+				public class Main
+				{
+					public static void main(String[] args) 
+					{
+						for (int i = 0; i < 5; i++)
+						 System.out.println(i);
+						System.out.println("Done");
+					}
+				}
+				
+ERROR: no error
+
+EXPLAINATION: Done statement print only once beacuse not consider "done statement" in for loop. We need to give both the statement under for loop 
+              body using curly brackets {} .
+
+SNIPPET:
+				public class Main
+				{
+					public static void main(String[] args) 
+					{
+						for (int i = 0; i < 5; i++)
+						{
+							System.out.println(i);
+							System.out.println("Done");
+						}
+					}
+				}

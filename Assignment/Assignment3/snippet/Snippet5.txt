@@ -1,0 +1,31 @@
+SNIPPET 5
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							for (int i = 10; i >= 0; i++) 
+							{
+								System.out.println(i);
+							}
+						}
+					}
+					
+ERROR: no error
+
+EXPLAINATION: It goes in Infinite loop beacuse in for loop condition always true( 10 > 0 always . we need to terminate the condition. In that we are Using 
+increment ,we need to use a DECREMENT.
+
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							for (int i = 10; i >= 0; i--) 
+							{
+								System.out.println(i);
+							}
+						}
+					}

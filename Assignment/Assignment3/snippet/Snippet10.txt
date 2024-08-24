@@ -1,0 +1,21 @@
+SNIPPET 10
+
+INCORRECT SNIPPET:
+					public class IncorrectWhileLoopControl 
+					{
+						public static void main(String[] args) 
+						{
+							int num = 10;
+							while (num = 10) 
+							{
+								System.out.println(num);
+								num--;
+							}
+						}
+					}
+					
+ERROR:incompatible types: int cannot be converted to boolean
+        while (num = 10) 
+                   ^
+
+EXPLAINATION: In while condition, only boolean values are accepted and we are providing int type value as a condition .

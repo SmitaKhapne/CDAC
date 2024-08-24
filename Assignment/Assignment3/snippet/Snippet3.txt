@@ -1,0 +1,22 @@
+SNIPPET 3
+
+INCORRECT SNIPPET:
+					public class DoWhileIncorrectCondition 
+					{
+						public static void main(String[] args) 
+						{
+							int num = 0;
+							do 
+							{
+								System.out.println(num);
+								num++;
+							} 
+							while (num > 0);
+
+						}
+					}
+					
+ERROR : no error
+
+EXPLAINATION: It goes under a Infinite loop. In Do loop, num will be always increment so thats why While condition is always true.
+

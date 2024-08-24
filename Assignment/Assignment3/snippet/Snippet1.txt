@@ -1,0 +1,28 @@
+SNIPPET 1
+
+INCOORECT CODE
+				public class InfiniteForLoop 
+				{
+					public static void main(String[] args)
+					{
+						for (int i = 0; i < 10; i--) 
+						{
+							System.out.println(i);
+						}
+					}
+				}
+
+EXPLAINATION: It goes under INFINITE loop beacause of Decrement condition. So, we have to change this condition instide of decrement will be  INCREMENT.
+
+
+CORRECT SNIPPET:
+				public class InfiniteForLoop 
+				{
+					public static void main(String[] args)
+					{
+						for (int i = 0; i < 10; i++) 
+						{
+							System.out.println(i);
+						}
+					}
+				}

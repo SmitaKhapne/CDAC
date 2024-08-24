@@ -1,0 +1,19 @@
+SNIPPET 11
+
+INCORRECT SNIPPET:
+					public class IncorrectLoopUpdate 
+					{
+						public static void main(String[] args)
+						{
+							int i = 0;
+							while (i < 5) 
+							{
+								System.out.println(i);
+								i += 2; // Error: This may cause unexpected results in output
+							}
+						}
+					}
+					
+ERROR: no error
+
+EXPLAINATION:In while condition, we are incrementing i by 2 so Output of above snippet is 0 2 4. 

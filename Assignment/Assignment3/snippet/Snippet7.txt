@@ -1,0 +1,38 @@
+SNIPPET 8
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int count;
+
+							while (count < 10) 
+							{
+								System.out.println(count);
+								count++;
+							}
+						}
+					}
+					
+ERROR:  variable count might not have been initialized
+        while (count < 10) 
+               ^
+			   
+EXPLAINATION: In that, count variable is not initialized.
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int count = 0;
+
+							while (count < 10) 
+							{
+								System.out.println(count);
+								count++;
+							}
+						}
+					}
+					

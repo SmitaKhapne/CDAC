@@ -1,0 +1,55 @@
+SNIPPET 2:
+			public class DecrementingLoop 
+			{
+				public static void main(String[] args) 
+				{
+					int total = 0;
+					for (int i = 5; i > 0; i--) 
+					{
+						total += i;
+						if (i == 3) continue;
+						total -= 1;
+					}
+					System.out.println(total);
+				}
+			}
+			
+DRY RUN:     
+         1 iteration :  total=0  ;
+                        i=5;
+					    {
+					     total = 5;
+						 if(i == 3) false condition;
+						 new total = 4;
+						} 
+						
+		2 iteration :  total = 4;
+                       i=4;
+						{	
+							total = 8;
+							if(i == 3) false condition;
+							new total = 7;
+						}
+						
+        3 iteration	:  total = 7;
+						i = 3
+						{
+						  total = 10;
+						  if(i == 3) true condition;
+						}
+        4 iteration :  total = 10;
+						i = 2;
+						{
+						   total = 12;
+						   if(i == 2) false condition;
+						   new total = 11;
+						 }
+        5 iteartion :   total = 1;
+                        i = 1;		
+						{ 
+						   total = 12;
+						   if(i == 3) false condition;
+						   new total = 11;
+						  }
+
+OUTPUT : 11						  

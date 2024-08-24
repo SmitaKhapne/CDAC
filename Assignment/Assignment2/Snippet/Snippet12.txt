@@ -1,0 +1,18 @@
+SNIPPET 12
+
+INCOORECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							while (true)
+							{
+								System.out.println("Infinite Loop");
+							}
+						}
+					}
+					
+					
+ERROR: no error occur
+
+EXPLAINATION: It's a infinite loop. In while loop there must have a termination condition. 					

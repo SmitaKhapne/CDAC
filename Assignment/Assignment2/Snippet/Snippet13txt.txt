@@ -1,0 +1,16 @@
+SNIPPET 12
+
+INCOORECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							String str = null;
+							System.out.println(str.length());
+						}
+					}
+					
+					
+ERROR: Exception in thread "main" java.lang.NullPointerException at Main.main
+
+EXPLAINATION : There is no valid memory to which str is pointing to because of that we are getting NullPointerException.

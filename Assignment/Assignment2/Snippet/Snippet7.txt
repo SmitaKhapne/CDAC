@@ -1,0 +1,34 @@
+SNIPPET 7
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args)  
+						{
+							int x = "Hello";
+							System.out.println(x);
+						}
+					}
+					
+					
+ERROR:Incompatible types: String cannot be coverted Int
+       int x = "Hello"
+                  ^
+
+
+
+EXPLAINATION: Here we have x as a int value and we are trying to assign String type value to it. But as java is a strongly type programming language hence it is not allowed us to perform such mistype assignment.
+				  
+				  
+				  
+CORRECT SNIPPET:				  
+                    public class Main 
+					{
+						public static void main(String[] args)  
+						{
+							int x = 10;
+							System.out.println(x);
+						}
+					}
+					
+					

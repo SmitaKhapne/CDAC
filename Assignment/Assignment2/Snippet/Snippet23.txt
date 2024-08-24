@@ -1,0 +1,50 @@
+SNIPPET 23
+
+INCORRECT SNIPPET
+					public class Confusion 
+					{
+						public static void main(String[] args) 
+						{
+							int value = 2;
+							switch(value) 
+							{
+								case 1:
+										System.out.println("Value is 1");
+								case 2:
+										System.out.println("Value is 2");
+								case 3:
+										System.out.println("Value is 3");
+								default:
+										System.out.println("Default case");
+							}
+						}
+					}
+					
+
+ERROR: no ERROR
+
+EXPLAINATION: In this snippet, 'break' statements is missing, so int value = 2 means it will excutes case 2, case 3, and default also.
+
+CORRECT SNIPPET:
+					public class Confusion 
+					{
+						public static void main(String[] args) 
+						{
+							int value = 2;
+							switch(value) 
+							{
+								case 1:
+										System.out.println("Value is 1");
+										break;
+								case 2:
+										System.out.println("Value is 2");
+										break;
+								case 3:
+										System.out.println("Value is 3");
+										break;
+								default:
+										System.out.println("Default case");
+							}
+						}
+					}
+					

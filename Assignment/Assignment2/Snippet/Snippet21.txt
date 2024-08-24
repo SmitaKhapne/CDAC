@@ -1,0 +1,23 @@
+SNIPPET 21
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							System.out.println("Hello, World!");
+							// Missing closing brace here
+					}
+					
+ERROR:  reached end of file while parsing }
+
+EXPLAINATION: The "reached end of file when parsing" error occurs when we are missing a curly brace in the program.
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							System.out.println("Hello, World!");
+					    }
+					}

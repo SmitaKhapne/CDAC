@@ -1,0 +1,25 @@
+SNIPPET 20
+
+INCORRECT SNIPPET:
+                    public class Main
+					{
+						public static void main(String[] args)
+						{
+							System.out.println("Hello, World")
+						}
+					}
+					
+ERROR: ';' expected
+        System.out.println("Hello, World")
+                                          ^
+									
+EXPLAINATION: ';' is the default terminator in java. It is mandatory to give ';' after completion of statements.
+
+CORRECT SNIPPET:
+					public class Main
+					{
+						public static void main(String[] args)
+						{
+							System.out.println("Hello, World");
+						}
+					}

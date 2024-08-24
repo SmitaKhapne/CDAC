@@ -1,0 +1,30 @@
+SNIPPET 1
+
+class Main 
+{
+   public void main(String[] args) 
+   {
+     System.out.println("Hello, World!");
+   }
+}
+
+
+
+ERROR : Main method is not static in class Main, please define the method as :
+        public static void main(String[] args)
+		
+		
+		
+		
+EXPLAINATION : If main method is not static then we have to create a object. so without creating a object Main should be accessible from anywhere that's whys we have to declare Main method as a STATIC.
+ 		
+		
+		
+CORRECT SNIPPET:
+class Main 
+{
+   public static void main(String[] args) 
+   {
+     System.out.println("Hello, World!");
+   }
+}

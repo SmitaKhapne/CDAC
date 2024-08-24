@@ -1,0 +1,40 @@
+SNIPPET 9
+
+INCORRECT SNIPPET:
+					public class Main
+					{
+						public static void main(String[] args) 
+						{
+							int class = 10;
+						    System.out.println(class);
+						}
+					}
+					
+					
+
+ERROR:					
+Main.java:5:error: not a statement
+                  int class = 10;
+                    ^
+Main.java:5: error: ';' expected
+             int class = 10;
+			 
+Main.java:5: error:  expected
+        int class = 10;
+                 ^
+Main.java:6: error:  expected
+        System.out.println(class);
+                          ^
+Main.java:6: error: illegal start of type
+        System.out.println(class);
+                           ^
+Main.java:6: error:  expected
+        System.out.println(class);
+                                ^
+								
+						
+EXPLAINATION: In Java, we can use any valid identifier as a class or variable name. 
+              However, it is not recommended to use a predefined identifier called keywords.				
+								
+								
+					

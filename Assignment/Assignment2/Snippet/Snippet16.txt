@@ -1,0 +1,28 @@
+SNIPPET 16
+
+CORRECT SNIPPET:
+				public class Main 
+				{
+					public static void main(String[] args) 
+					{
+						int num = 10;
+						double result = num / 4;
+						System.out.println(result);
+					}
+				}
+				
+ERROR: no error
+
+EXPLAINATION: Here we expect result 2.5 but we got 2.0. Because when this expression num/4 is evaluated then here we have numerator & denometor both as int data type so result value is also int. Hence, instead of 2.5 we got 2 here. And then this 2 will get assign to result variable which is of type double, hence we see 2.0 in output.
+
+CORRECT SOLUTION:
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		int num = 10;
+		double result = (double)num / 4;
+		System.out.println(result);
+	}
+}

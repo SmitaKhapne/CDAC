@@ -1,0 +1,35 @@
+SNIPPET 6
+
+INCORRECT SNIPPET:  public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int x = y + 10;
+							System.out.println(x);
+						}
+					}
+					
+					
+					
+ERROR: cannot find symbol 
+       int x = y + 10;
+	           ^
+	   symbol = variable y
+	   location = class Main
+	   
+	   
+	   
+EXPLAINATION: we have to define 'y' and initialize with some value before using i.e. int y = 0; or any other values.
+
+
+CORRECT SNIPPET :
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+						     int y = 0;
+							int x = y + 10;
+							System.out.println(x);
+						}
+					}                    
+	   

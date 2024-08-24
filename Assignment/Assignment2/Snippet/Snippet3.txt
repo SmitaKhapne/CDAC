@@ -1,0 +1,29 @@
+SNIPPET 3
+
+INCOORECT CODE:
+					public class Main 
+					{
+						public static int main(String[] args)
+						{
+							System.out.println("Hello, World!");
+							return 0;
+						}
+					}
+					
+					
+ERROR: Main method must return a value of type void in class main, please define the main class as a:
+       public static void main(String[] args)
+					
+					
+EXPLAINATION: Return type of Main is "void"  because JVM never expect any kind of return values. 
+
+
+CORRECT CODE:
+                    public class Main 
+					{
+						public static void main(String[] args)
+						{
+							System.out.println("Hello, World!");
+						}
+					}
+					

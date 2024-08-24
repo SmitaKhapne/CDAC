@@ -1,0 +1,48 @@
+SNIPPET 10
+
+INCORRECT SNIPPET: 
+					public class Main 
+					{
+						public void display() 
+						{
+							System.out.println("No parameters");
+						}
+						public void display(int num) 
+						{
+							System.out.println("With parameter: " + num);
+						}
+						public static void main(String[] args)
+						{
+							display();
+							display(5);
+						}
+					}
+					
+					
+ERROR: error:non-static method display() cannot be referenced from a static context
+        display();
+        ^
+      error: non-static method display(int) cannot be referenced from a static context
+        display(5);
+		
+		
+EXPLAINATION: Display() is non-static method so cannot invoked without creating an object.
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public void display() 
+						{
+							System.out.println("No parameters");
+						}
+						public void display(int num) 
+						{
+							System.out.println("With parameter: " + num);
+						}
+						public static void main(String[] args)
+						{
+							Main obj = new Main();
+							obj.display();
+							obj.display(5);
+						}
+					}

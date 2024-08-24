@@ -1,0 +1,31 @@
+SNIPPET 11
+
+INCORRECT SNIPPET: 
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int[] arr = {1, 2, 3};
+							System.out.println(arr[5]);
+						}
+					}
+					
+					
+ERROR: Exception in thread "main" java.lang.ArrayIndexOutOfBoundException: Index 5 out of bound for length 3 at Main.main					
+
+EXPLAINATION: we intialize array with the size of 3 and we want to print array with size of 5. So, In that condition array goes out of bound.
+
+CORRECT SNIPPET:
+public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int[] arr = {1, 2, 3};
+							System.out.println(arr[0]);
+							System.out.println(arr[1]);
+							System.out.println(arr[2]);
+						}
+					}
+					
+					
+					output:1 2 3

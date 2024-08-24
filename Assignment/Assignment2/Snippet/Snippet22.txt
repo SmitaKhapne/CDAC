@@ -1,0 +1,36 @@
+SNIPPET 22
+
+INCORRECT SNIPPET
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							static void displayMessage() 
+							{	
+								System.out.println("Message");
+							}
+						}
+					}
+					
+					
+ERROR:  illegal start of expression
+        static void displayMessage() 
+        ^
+      error: class, interface, or enum expected
+	  
+	  
+EXPLAINATION: Nested functions are not supported directly in Java
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+						    displayMessage();
+						}
+						
+						static void displayMessage() 
+						{	
+							System.out.println("Message");
+						}
+					}

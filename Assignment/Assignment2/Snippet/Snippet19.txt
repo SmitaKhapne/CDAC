@@ -1,0 +1,18 @@
+SNIPPET 18
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int a = 10;
+							int b = 0;
+							int result = a / b;
+							System.out.println(result);
+						}
+					}
+					
+ERROR:  Exception in thread "main" java.lang.ArithmaticException: / by zero at Main.main
+
+EXPLAINATION: Here we will get runtime exception, as in mathematic whenever we divide anything by zero then it result is into infinite.
+

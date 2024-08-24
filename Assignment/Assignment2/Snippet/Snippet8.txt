@@ -1,0 +1,31 @@
+SNIPPET 8
+
+INCORRECT SNIPPET:
+						public class Main 
+						{
+							public static void main(String[] args)
+							{
+								System.out.println("Hello, World!"
+							}
+						}
+						
+						
+						
+ERROR:  ')' expected						
+       System.out.println("Hello, World!"
+	                                     ^
+										 
+										 
+										 
+EXPLAINATION: After the completion of print statement we have to close open brackets() and give semicolon[;]. It is Syntax of JAVA.	
+
+
+
+CORRECT SNIPPET:							 
+						public class Main 
+						{
+							public static void main(String[] args)
+							{
+								System.out.println("Hello, World!");
+							}
+						}

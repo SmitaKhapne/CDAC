@@ -1,0 +1,27 @@
+SNIPPET 26
+
+INCORRECT SNIPPET:
+					public class Switch 
+					{
+						public static void main(String[] args) 
+						{
+							int number = 5;
+							switch(number) 
+							{
+								case 5:
+										System.out.println("Number is 5");
+										break;
+								case 5:
+										System.out.println("This is another case 5");
+										break;
+								default:
+										System.out.println("This is the default case");
+							}
+						}
+					}
+					
+ERROR: uplicate case label
+		case 5:
+		 ^
+		 
+EXPLAINATION: In switch case, Duplicate cases are not allowed as in such case JVM will not able to decide which one to execute.

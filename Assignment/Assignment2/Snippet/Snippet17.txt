@@ -1,0 +1,33 @@
+SNIPPET 17
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int a = 10;
+							int b = 5;
+							int result = a ** b;
+							System.out.println(result);
+						}
+					}
+					
+ERROR:  illegal start of expression
+        int result = a ** b;
+                        ^
+EXPLAINATION: Such operator is not defined in java. We have to use '*' operator for multiplication.
+
+
+CORRECT SNIPPET:
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        int a = 10;
+        int b = 5;
+        int result = a * b;
+        System.out.println(result);
+    }
+}
+
+output:50

@@ -1,0 +1,17 @@
+SNIPPET 5
+
+INCORRECT SNIPPET:
+                     public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							System.out.println("Main method with String[] args");
+						}
+						public static void main(int[] args) 
+						{
+							System.out.println("Overloaded main method with int[] args");
+						}
+					}
+					
+
+EXPLAINATION: In this case, we are not getting any error as method overloading is allowed in java. Here JVM will invoke main method having String[] as a parameter. Hence, 1st method get invoked here.

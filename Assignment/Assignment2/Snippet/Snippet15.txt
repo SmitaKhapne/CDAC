@@ -1,0 +1,33 @@
+SNIPPET 15
+
+INCORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int num1 = 10;
+							double num2 = 5.5;
+							int result = num1 + num2;
+							System.out.println(result);
+						}
+					}
+
+
+ERROR: error: incompatible types: possible lossy conversion from double to int
+        int result = num1 + num2;
+                          ^
+						  
+EXPLAINATION: Down casting is not possible implicitly in java. Here we are trying to assign double type of data (which requires 8 bytes) to int type (which is of 4 bytes). So clearly we are loosing some bits of data here.
+
+
+CORRECT SNIPPET:
+					public class Main 
+					{
+						public static void main(String[] args) 
+						{
+							int num1 = 10;
+							double num2 = 5.5;
+							double result = num1 + num2;
+							System.out.println(result);
+						}
+					}

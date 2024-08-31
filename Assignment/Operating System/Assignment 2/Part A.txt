@@ -1,0 +1,54 @@
+1.echo "Hello, World!"  = It will display "Hello, World!" on console
+
+2.name="Productive" =
+
+3. touch file.txt = It will create a new file.
+
+4. ls -a = It will display all the files and also display hidden files.
+
+5. rm file.txt = It will remove a "file.txt" file.
+
+6. cp file1.txt file2.txt = we have to create a file "file1.txt". cp is just copy the content of "file1.txt" and paste it to the new created file "file2.txt".
+
+7. mv file.txt /path/to/directory/ = give a path of directory where we want to move "file.txt" file.
+
+8. chmod 755 script.sh = In that 775 means, 7 -> owner(r = 2^2, w = 2^1, x = 2^0), 7 -> group(r = 2^2, w = 2^1, x = 2^0), 5 -> other((r = 2^2, x = 2^0). 
+                         In that we just change the accessing mode using number.
+						 
+9.grep "pattern" file.txt = grep is used for to search a specific word in any file.
+
+10. kill PID : to kill the active process and we have to give process ID.
+
+11. mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt :
+                           1.mkdir = create a directory.
+						   2.cd for = change directory
+						   3.touch = create a file
+						   4.echo = to print a statement.
+						   5.cat = print all the statement on console.
+12. ls -l | grep ".txt" = 
+							1.ls -l = list out all the files in a seperate lines.
+							2.grep = to find something, like ".txt" file in directory.
+							
+13. grep -r "pattern" /path/to/directory/ = 
+                                               1.grep = used for to find somethink.
+											   2. -r = -r means recursively. It will check all the files under given directory.
+											 
+14. cat file1.txt file2.txt | sort | uniq –d = 
+                                               1.cat = It will print the data of "file1.txt" and "file2.txt".
+											   2.sort = It used for sorting the data in Alphabetical order(a-z).
+											   
+15. cat file1.txt file2.txt | sort | uniq –d =
+                                               1.cat = print the data of given file.
+											   2.sort = It used for sorting the data in Alphabetical order(a-z).
+											   3.uniq -d = used for to display duplicate sentence.
+											   
+16. chmod 644 file.txt = chmod used for to change the accessing mode. 
+						 644 means, 6 -> owner(r = 2^2, w = 2^1, x =no excute access), 4 -> group(only read access), 4 -> other((only read access).
+						 
+17. cp -r source_directory destination_directory = It used for to copy the content of from one directory to another directory.
+
+18. find /path/to/search -name "*.txt" = find used for to finding the .txt file in given directory.
+
+19. chmod u+x file.txt = chmod used for to change the accessing mode of given file. u+x means u -> user, +x -> having a access for only excute this file.
+
+20. echo $PATH = list down all the directries where excutable files are available.

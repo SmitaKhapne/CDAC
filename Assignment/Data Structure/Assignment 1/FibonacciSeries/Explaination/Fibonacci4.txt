@@ -1,0 +1,6 @@
+1. In fibonacci series 1st number is 0 and 2nd is 1.
+2. If given number is less than 2 then print first two values i.e. 0 & 1 and return 
+3. Else print 0 & 1 and proceed further
+4. we need to add them and store it into 3rd variable.
+5. use for loop to print fabonacci series till given number.
+6. everytime we need to update the value of 1st and 2nd number and then print.

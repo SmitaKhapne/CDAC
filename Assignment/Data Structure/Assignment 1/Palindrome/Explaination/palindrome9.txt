@@ -1,0 +1,4 @@
+1. take a number.
+2. take the backup of original number.
+3. Form a new number by taking out the digits in reverse manner.
+4. if original and reverse both are same then it is PALINDROME otherwise NOT-PALINDROME.

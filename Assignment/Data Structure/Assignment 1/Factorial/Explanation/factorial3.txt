@@ -1,0 +1,7 @@
+1. take number from user.
+2. by using recursion we can calculate factorial of given number.
+3. for ex : num = 4 , then num * fact(num -1) , this give the recursive call to the method.
+4. In this case, we can use num==1 as a recursion terminating condition as factorial of 1 is 1;
+5. So once we reach at recursion terminating condition i.e. when num==1, then it will break the recursive flow and return num.
+6. Then remaining recursive stacks also start pop out by returning a calculating result.
+7. And finally we got calculated factorial value.

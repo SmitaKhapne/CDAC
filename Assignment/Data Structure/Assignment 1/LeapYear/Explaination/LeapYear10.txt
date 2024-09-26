@@ -1,0 +1,4 @@
+1. take year.
+2. 1 condition= check the given number is divisible by 4 but not by 100.
+3. Or 2 condition = check year is divisible by 400.
+4. if any one of the condition is satisfied then it is LEAP-YEAR otherwise NOT.

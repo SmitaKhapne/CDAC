@@ -1,0 +1,5 @@
+1. Take two number from user.
+2. subtract both the number and store difference in variable.
+3. then find the minimun number between given number.
+4. update the first number with difference value and 2nd value with minimum value.
+5. do this until both the number not found in same or till num is greater than 0

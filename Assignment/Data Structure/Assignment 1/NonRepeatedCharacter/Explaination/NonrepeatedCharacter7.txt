@@ -1,0 +1,6 @@
+1. Take string.
+2. convert string into character Array.
+3. take 2 for loop.
+4. first for loop start with i=0 and second with j=i+1 (i.e. from next element),
+5. compare character taken out from outer loop with rest of the elements traverse by inner loop.
+6. if duplicate character found then print.

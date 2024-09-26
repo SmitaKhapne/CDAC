@@ -1,0 +1,5 @@
+1. take a String.
+2. covert the string into character array.
+3. take 2 for loop
+4. Taken out character from outer loop and compare with rest of the array elements after that using inner loop.
+5. If we traverse entire remaining array and we don't find duplicate then that is the first non repeating character

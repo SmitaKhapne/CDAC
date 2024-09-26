@@ -1,0 +1,3 @@
+1. take number.
+2. In Java language, having a inbuild method in Math class to find the square root of number.
+3. Math.sqrt(a);

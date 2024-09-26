@@ -1,0 +1,7 @@
+Explaination:
+1. take a number from user ex : 153.
+2. keep the backup of original number.
+3. takeout digit from original and then make a cube of it.
+4. then hold the sum of cube of digits in a temprarory vairiable.
+5. then compare original number with temprarory vairiable.
+6.if both are same then it is armstrong otherwise not armstrong number.

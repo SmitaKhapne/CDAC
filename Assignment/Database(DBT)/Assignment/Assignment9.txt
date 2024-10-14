@@ -1,0 +1,17 @@
+Assignment – 9
+ Querying Multiple Tables at Once.
+ 
+1) Write a query that lists each order number followed by the name of the customer who made the order.
+ANS: select orders.onum, Customers.cname from orders,customers where customers.cnum = orders.cnum;
+
+ 
+2) Write a query that gives the names of both the salesperson and the customer for each order along with the order number. 
+ANS:select salespeople.Sname, customers.Cname, orders.Onum from orders,customers,salespeople where orders.snum= customers.Snum and salespeople.snum = orders.snum ;
+
+3) Write a query that produces all customers serviced by salespeople with a commission above 12%. Output the customer’s name, the salesperson’s name, and the salesperson’s rate of commission. 
+ANS:
+select customers.cname,salespeople.Sname,comm* 100 from customers,salespeople where customers.snum = salespeople.Snum and comm > .12;
+
+
+4) Write a query that calculates the amount of the salesperson’s commission on each order by a customer with a rating above 100. 
+ANS: select orders.amt, salespeople.comm from orders,customers,salespeople where orders.snum = customers.snum and orders.Snum = salespeople.Snum and rating > 100 order by amt;

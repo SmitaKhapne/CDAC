@@ -1,0 +1,19 @@
+show databases;
+ 
+ create database mydatabase;
+ 
+ use mydatabase;
+ 
+ create table Orders (Onum int(4), Amt float(7,2), Odate date,Cnum int(4), Snum int(4));
+ 
+ insert into Customers (Cnum,Cname,City,Rating,Snum) 
+ values (3001,18.69, '03-OCT-1990',2008,1007),
+ (3003,767.19, '03- OCT -1990',2001,1001  ),
+ (3002,1900.10, 03- OCT -1990, 2007, 1004 ),
+ (3005, 5160.45, '03- OCT -1990', 2003, 1002  ),
+ (3006, 1098.16, '03- OCT -1990', 2008, 1007  ),
+ (3009,1713.23, 04- OCT -1990, 2002, 1003 ),
+ (3007 , 75.75, '04- OCT -1990',2004 ,1002),  
+(3008, 4723.00, '05- OCT -1990', 2006, 1001 ), 
+(3010, 1309.95, '06- OCT -1990', 2004, 1002);  
+(3011, 9891.88, '06- OCT -1990', 2006, 1001 );

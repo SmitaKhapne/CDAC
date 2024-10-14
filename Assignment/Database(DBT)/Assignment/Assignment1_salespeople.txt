@@ -1,0 +1,15 @@
+Assignment 1:
+show databases;
+create database mydatabase;
+use mydatabase;
+create table salespeople(Snum int(4),Sname varchar(10),City varchar(10),Comm float(3,2)) ;
+show tables;
+desc salespeople;
+insert into salespeople (Snum,Sname,City,Comm) 
+values (1001,'Peel','London',.12),
+		(1002,'Serres','San jose',.13),
+		(1004,'Motika','London',.11), 
+		(1007,'Rifkin','Barcelona',.15),
+		(1003,'Axelrod','New York',.10);
+ 
+ 

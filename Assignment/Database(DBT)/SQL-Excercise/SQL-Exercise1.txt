@@ -1,0 +1,59 @@
+1.Que AND 4.Que
+show databases;
+
+create database mydatabase;
+
+use mydatabase;
+
+create table SEMP(empno char(4),empname char(20), basic float, deptno char(2), depthead char(4));
+
+show tables;
+
+insert into SEMP(empno,empname,basic,deptno) values ('0001','SUNIL',6000,'10'),('0002','HIREN',8000,'20');
+
+insert into SEMP(empno,empname,basic,deptno,depthead) values ('0003','ALI',4000,'10','0001');
+
+insert into SEMP(empno,empname,basic,depthead) values ('0004','GEORGE',6000,'0002');
+
+select * from SEMP;
+
+
+2.Que AND 3.Que
+create table SDEPT (deptno char(2), deptname char(15));
+
+insert into SDEPT(deptno,deptname) values ('10','Development'),('20','Training');
+
+select * from SDEPT;
+
+
+5.display all the data from the S table.  
+
+create table S (s char(4), Sname char(10), status int, City char(15));
+insert into S(s,Sname,Status,City) values ('s1','king', 20, 'London'),('s2', 'Allen', 20, 'paris'),('s3','ford',10,'Athens');
+select * from S;
+
+6.Display only the S# and SNAME fields from the S table.
+ select s, Sname from s;
+ 
+7.Display the PNAME and COLOR from the P table for the CITY=”London”.
+select `p#`, pname from p where city = 'london';
+
+8. Display all the Suppliers from London. 
+select * from S where city like 'London';
+
+9.Display all the Suppliers from Paris or Athens. 
+ select * from S where city like 'paris' or city like 'Athens';
+
+10. Display all the Projects in Athens.  
+ select * from projects where city ='Athens';
+
+11. Display all the Partnames with the weight between 12 and 14 (inclusive of both). 
+select * from p where weight >=12 or weight <= 14;
+
+12. Display all the Suppliers with a Status greater than or equal to 20. 
+select * from s where status <=20;
+
+13. . Display all the Suppliers except the Suppliers from London.   
+select * from S where city not like 'london';
+
+14.select city from S;

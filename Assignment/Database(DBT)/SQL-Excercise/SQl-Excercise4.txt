@@ -1,0 +1,45 @@
+SQL Exercise 4   
+1. Display the minimum Status in the Supplier table. 
+ANS: select min(status) from s;
+ 
+2. Display the maximum Weight in the Parts table.  
+ ANS: select max(weight) from p;
+ 
+3. Display the average Weight of the Parts. 
+ANS: select avg(weight) from p;  
+
+4. Display the total Quantity sold for part ‘P1’.   
+ANS: select p.`p#`,sjp.qty from p,sjp where p.`p#` = sjp.`p#` having `p#` = 'p1';
+
+
+5. Display the total Quantity sold for each part. 
+ANS: select p.`p#`,sjp.qty from p,sjp where p.`p#` = sjp.`p#`; 
+
+
+6. Display the average Quantity sold for each part.  
+ANS:  select p.`p#`, avg(qty) from p,sjp where p.`p#` = sjp.`p#` group by p.`p#`;
+
+ 
+7. Display the maximum Quantity sold for each part, provided the maximum Quantity is greater than 800.
+ANS:  select `p#`, max(qty) from sjp group by `P#` having max(qty) > 800;
+
+   
+8. Display the Status and the count of Suppliers with that Status.
+ANS: select status, coun(status) from s group by status;
+
+ 
+9. Display the count of Projects going on in different cities.   
+ANS:  select city, count(city) from projects group by city;
+
+
+10. What is the difference between COUNT(Status) and COUNT(*) ?   
+ANS: count(status) display number of rows having in status column.
+     count(*) will display all the rows present in the tables.
+
+11. Display the Status and the Count of Suppliers with that Status in the following format 
+as shown below:-   
+Status   Count
+Ten      1   
+Twenty   2   
+Thirty   3  
+ANS: select case when status=10 then 'Ten' when status=20 then 'Twenty' when status=30 then 'Thirty' end 'stat', count(sname) from s group by status;

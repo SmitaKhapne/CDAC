@@ -1,0 +1,109 @@
+1.Write a program that computes the perimeter and the area of a rectangle. Define your own values for the length and width. 
+(Assuming that L and W are the length 
+and width of the rectangle, Perimeter = 2*(L+W) and Area = L*W).   
+
+
+create procedure calcarea()
+begin
+declare len int default 2;
+declare wid int default 4;
+declare area int;
+declare peri int;
+set peri = 2 * (len + wid);
+set area = len * wid;
+insert into temp values(area,peri);
+end; //
+
+
+2. Write a program that declares an integer variable called num, assigns a value to it, 
+and computes and inserts into the tempp table the value of the variable itself, its 
+square, and its cube.     
+
+Ans:
+create procedure result()
+begin
+declare num int default 2;
+declare sq int;
+declare cu int;
+set sq = power(num,2);
+set cu = power(num,3);
+insert into temp values(sq,cu);
+end; //
+
+
+
+
+3. Convert a temperature in Fahrenheit (F) to its equivalent in Celsius (C) and vice 
+versa. The required formulae are:-  C= (F-32)*5/9    
+F= 9/5*C + 32   
+ANS: 
+create procedure temperature()
+begin
+declare fah int default 50;
+declare cel int default 32;
+declare c int;
+declare f int;
+set c = (fah - 32) * 5/9;
+set f = 9/5 * cel + 32;
+insert into temp values(c,f);
+end; //
+
+ 
+4. Convert a number of inches into yards, feet, and inches. For example, 124 inches 
+equals 3 yards, 1 foot, and 4 inches. 
+ANS:
+1 foot = 12 inches 1 yard = 3 feet = 36 inches 1 mile = 1,760 yards = 5,280 feet = 63,360
+
+Ans:
+create procedure ct()
+begin
+declare inc int default 124;
+declare ft int;
+declare yd int;
+declare ftt int;
+set ft = inc/12;
+set yd = ft/3;
+set ftt = mod(inc,3);
+set inc = mod(inc,12);
+insert into temp1 values(yd,ftt,inc);
+end; //
+
+
+
+
+   
+5. Write a program that enables a user to input an integer. The program should then 
+state whether the integer is evenly divisible by 5.
+ANS:
+create table temp2(val int,str varchar(10));
+
+create procedure pro(val int)
+begin
+declare num int;
+set num = val;
+if num mod 5 = 0 then
+insert into temp2 values(num,'Divisible');
+else
+insert into temp2 values(num,'Not');
+end if;
+end; //
+
+
+
+6. Your block should read in two real numbers and tell whether the product of the two 
+numbers is equal to or greater than 100.
+ANS:     
+create procedure rl()
+begin
+	declare x int default 10;
+	declare y int default 10;
+	declare res int;
+	set res = x*y;
+	if res > 100 then
+			insert into temp2 values(res,'greater');
+	else
+			insert into temp2 values(res,'equal');
+	end if;
+end; //
+
+			

@@ -1,0 +1,57 @@
+MySQL     
+Exercise 6    
+1. Write a stored procedure by the name of Comp_intr to calculate the amount of 
+interest on a bank account that compounds interest yearly. The formula is:-         
+I = p (1+ r) y – p    
+where:-    
+I is the total interest earned.     
+p is the principal.           
+r is the rate of interest as a decimal less than 1, and    
+y  is the number of years the money is earning interest.    
+Your stored procedure should accept the values of p, r and y as parameters and insert 
+the Interest and Total amount into tempp table.     
+
+ANS:
+delimiter //
+create procedure comp_intr(p float,r float,y int)
+begin
+	declare I float;
+	declare amount float;
+	declare sum float;
+	set sum = power((1 + r/100),y);
+	set I = p * sum - p;
+	set amount = I + p;
+	
+	insert into ap(amt,prpl) values(amount,I);
+end; //
+delimiter ;
+
+
+
+
+
+
+  
+2. Create a stored function by the name of Age_calc.  Your stored function should 
+accept the date of birth of a person as a parameter.  The stored function should 
+calculate the age of the person in years. The stored function should return the age 
+in years.   
+ANS:
+delimiter //
+create function age_calc(dob date)
+returns bigint
+deterministic
+begin
+	declare calc bigint;
+	set calc = year(sysdate())- year(dob);
+	return calc;
+end; //
+
+
+create procedure ageaccept()
+begin
+	declare x bigint;
+	set x = age_calc('2020-10-21');
+	insert into age(ag) values(x);
+end; //
+	

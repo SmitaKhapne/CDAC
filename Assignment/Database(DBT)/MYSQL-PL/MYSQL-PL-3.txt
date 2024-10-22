@@ -1,0 +1,63 @@
+MySQL   
+Exercise 3   
+1. Write a program containing a loop that iterates from 1 to 1000 using a variable I,                         
+which is incremented each time around the loop. The program should output the 
+value of I every hundred iterations (i.e., the output should be 100, 200, etc.).
+ANS:  
+create procedure program()
+begin
+    declare x int default 1;
+        pqr_loop : loop
+            if x > 1000 then
+                leave pqr_loop;
+            end if;
+      set x = x+1;
+            if mod(x,100) != 0 then
+                iterate pqr_loop;
+            else
+				insert into lyear values(x);
+            end if;
+    end loop;
+    end; //
+  
+2. Write a program that examines all the numbers from 1 to 999, displaying all those 
+for which the sum of the cubes of the digits equal the number itself.  
+ANS:
+delimeter //
+
+create procedure prog1()
+begin
+	declare x int default 1;
+	declare digit int;
+	declare cb int;
+	declare sum int;
+	pqr_loop : loop
+		if x > 100 then
+			leave pqr_loop;
+		end if;
+		if x < 100 then
+			set digit = mod(x,10);
+			set cb = power(digit,3);
+			set sum = sum + cb;
+			set x = x / 10;
+	
+		end if;	
+	end loop;	
+
+
+
+ 
+3. Write a program that Selects from any table a minimum and maximum value for a 
+radius, along with an increment factor, and generates a series of radii by repeatedly 
+adding the increment to the minimum until the maximum is reached. For each value 
+of the radius, compute and display the circumference, area, and volume of the 
+sphere. (Be sure to include both the maximum and the minimum values.).   
+
+
+4. A palindrome is a word that is spelled the same forward and backward, such as 
+level, radar, etc. Write a program to Selects from any table a five letter word and 
+determine whether it is a palindrome.    
+
+
+5. Modify the above program to Select from any table a variable length word. This 
+requires determining how many characters are read in.   

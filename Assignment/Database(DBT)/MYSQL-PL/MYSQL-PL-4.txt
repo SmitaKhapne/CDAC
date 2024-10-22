@@ -1,0 +1,98 @@
+MySQL   
+
+
+
+xercise 4   
+   
+1. The CUSTOMER table of a state electricity board consists of the following fields:-    
+   
+  Meter Number    Varchar    4   
+  Meter Type                   Char    1   
+              Previous Reading          Int    5   
+              Current Reading            Int    5   
+              Customer Type              Char    1   
+              Last Bill payment          Char    1 (values could be ‘Y’ or ‘N’)   
+   
+There are two types of meters viz. 3- phase or 1-phase coded as ‘T’ or ‘S’ 
+respectively. There are 4 types of customers viz. Agricultural Industrial, 
+Commercial and Residential with codes ‘A’ , ‘I’, ‘C’ and ‘R’ respectively.    
+   
+Formulae:-   
+Units used = Current Reading – Previous Reading   Rate 
+=Rs.1/ 1.25/ 1.50/ 1.30 for A/I/C/R respectively.   
+Amount = rate*units used   
+Surcharge = 5% for single phase    
+10% for 3 phase   
+Excise = 30% of (amount +Surcharge)   
+Net = Amount +Surcharge + Excise   
+   
+Write a block to calculate the bill for each customer. The program should insert the 
+Meter no., Units used, Rate, Amount, Surcharge, Excise duty and Net for each 
+customer into some other suitable table. Also, at the end, it should insert the total 
+Amount, Surcharge, Excise and Net into some other table.   
+
+ANS:
+
+delimiter //
+create procedure custprocedure()
+begin
+	declare mnum varchar(4);
+	declare mtype char(1);
+	declare pre int(5);
+	declare cur int(5);
+	declare ctype char(1);
+	declare bill char(1);
+	declare rate float(5);
+	declare x int default 0;
+	declare unitused int;
+	declare amount float;
+	declare surcharge float;
+	declare excise float;
+	declare net float;	
+	declare c1 cursor for select * from customer;
+	open c1;
+	while x < 4 do
+		fetch c1 into mnum,mtype,pre,cur,ctype,bill,rate;
+		set unitused = cur - pre;
+		case 
+		when ctype = 'A' then
+			set rate = 1;
+		when ctype = 'I' then
+			set rate = 1.25;
+		when ctype = 'C' then
+			set rate = 1.50;
+		when ctype = 'R' then
+			set rate = 1.30;
+		end case;
+		
+		set amount = rate * unitused;
+		
+		case
+			when mtype = 'T' then
+				set surcharge = 0.05 * amount;
+			when mtype = 'S' then
+				set surcharge = 0.1 * amount;
+		end case;
+		
+		set excise = 0.3 * (amount + surcharge);
+		set net = amount + surcharge + excise;
+		
+		insert into abc(amount,surcharge,excise,net) values(amount,surcharge,excise,net);
+		set x = x + 1;
+		end while;
+		
+		close c1;
+end; //
+
+
+
++--------+-----------+--------+--------+
+| amount | surcharge | excise | net    |
++--------+-----------+--------+--------+
+|    200 |        10 |     63 |    273 |
+|    125 |      12.5 |  41.25 | 178.75 |
+|    300 |        15 |   94.5 |  409.5 |
+|    130 |        13 |   42.9 |  185.9 |
++--------+-----------+--------+--------+
+	
+	

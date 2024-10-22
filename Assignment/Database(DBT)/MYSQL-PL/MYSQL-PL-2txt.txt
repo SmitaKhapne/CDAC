@@ -1,0 +1,63 @@
+MySQL    
+Exercise 2  
+
+  
+1. Select from any table a number and determine whether it is within a given range (for example, between 1 and 10).
+ANS:   
+create table temp(num int, str varchar(15));
+
+delimiter //
+create procedure pqr6(x int)
+begin
+	if x between 1 and 10 then
+		insert into temp2 values(x,'found');
+	else
+		insert into temp2 values(x,'Not found');
+	end if;
+end; //
+delimiter ;
+
+call pqr6(11);
+call pqr6(5);
+
+   
+2. Select from any table three positive integers representing the sides of a triangle, and 
+determine whether they form a valid triangle. Hint: In a triangle, the sum of any two 
+sides must always be greater than the third side.   
+ANS:
+create table shape1(str varchar(15));
+ 
+create procedure pqr8(x int, y int, z int)
+ begin
+	 if (x+y) > z || (x+z) > y || (y+z) > x then
+		insert into shape values('triangle');
+	else
+		insert into shape values('not');	
+	end if;
+end; //
+	  
+
+   
+3. Check if a given a year is a leap year. The condition is:- year should be (divisible by 4 
+and not divisible by 100) or (divisible by 4 and divisible by 400.). The year should be 
+Selected from some table. 
+ANS:
+ create table lyear(int year);
+ insert into lyear values(2020),(2023),(2024);
+ 
+ delimiter //
+ create procedure abc5()
+ begin
+	 declare x int;
+	 select year into x from lyear;
+	 if (mod(year,4)= 0 && mod(year,100) != 0) || mob(year,400) == 0 then
+		insert into shape values('Leap year');
+	else
+		insert into shape values('NOT leap year');
+	end if;
+end; //
+
+
+   
+4. Write a program that Selects from any table two character strings.  Your program should 
+then determine if one character string exists inside another character string.   

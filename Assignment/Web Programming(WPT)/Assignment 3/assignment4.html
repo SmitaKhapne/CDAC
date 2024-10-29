@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            p{
+                color: black;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <div>
+            <p>
+                <a style="text-decoration: none"; href="#" onmouseover="highlightBold()" onmouseout="removehighlighted"
+                 on mouse over here bold word of the following paragraph will be highligted</a>
+            </p>
+            <p>
+                <b>We</b>
+                have just started
+                <b>this </b>section for the user
+                (
+                <b>beginner </b>to intermediate
+                )
+                who <b>want </b>to work with
+                <b> various</b> javascript 
+                <b>problems</b> and write script online to
+                <b>test</b> their javascript <b>skill.</b>
+            </p>
+        </div>
+
+        <script>
+            function highlightBold()
+            {
+                const boldWords = document.querySelectorAll("p b");
+                boldWords.forEach(word = word.classList.add("highlight"));
+            }
+
+            function removeHighlight()
+            {
+                const boldWords = document.querySelectorAll("p b");
+                boldWords.forEach(word=> word.classList.remove("highlighted"));
+            }
+        </script>
+        
+    </body>
+</html>

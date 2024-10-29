@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form id="userinfo">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname"><br>
+        <br>
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname"><br>
+        <br>
+    
+        <label for="ct">contact No.</label>
+        <input type="number" id="ct"><br>
+        <br>
+
+        <label for="mail">Email</label>
+        <input type="email" id="mail">
+        <br>
+        <br>
+        <button type="button" onclick="validateform()">Submit</button>
+        </form>
+
+        <div class="user-details" id="userDetails"></div>
+
+        <script>
+            function validateform()
+            {
+                const firstname = document.getElementById("fname").value;
+                const lastname = document.getElementById("lname").value;
+                const ctnumber = document.getElementById("ct").value;
+                const email = document.getElementById("mail").value;
+
+                const userDetailsDiv = document.getElementById("userDetails");
+                userDetailsDiv.innerHTML= `
+                    <h3>userDetails:</h3>
+                    <p>first name: ${firstname}</p>
+                    <p>last name: ${lastname}</p>
+                    <p>contact number: ${ctnumber}</p>
+                    <p>email: ${email}</p>
+                 `   ;
+                
+            }
+        </script>
+    </body>
+</html>

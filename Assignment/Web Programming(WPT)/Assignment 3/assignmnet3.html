@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <label for="cars">Choose a Car:</label>
+        <select id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="audi">Audi</option>
+            <option value="verna">Verna</option>
+            <option value="swift">Swift</option>
+        </select>
+
+        <button onclick="removeDropDown()">Remove</button>
+
+        <script>
+            function removeDropDown()
+            {
+                const dd = document.getElementById("cars");
+                    //dd.remove();
+                    dd.remove(dd.selectedIndex);
+            }
+        </script>
+    </body>
+</html>

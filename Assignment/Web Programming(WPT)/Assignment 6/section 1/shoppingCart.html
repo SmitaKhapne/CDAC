@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let totalCost = 0;
+            const tax = 0.50;
+
+            function addCost(price) {
+                totalCost += price;
+            }
+
+            function calculateTotalCost() {
+                return totalCost * (1 + tax);
+            }
+                addCost(700);
+                addCost(100);
+                addCost(300);
+                document.writeln("Total cost including tax: "+calculateTotalCost());
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fetchUser = () =>{
+            return new Promise((resolve,reject) =>{
+            setTimeout(() => {
+                resolve({data: "Monkey", admin:true});
+            },3000);
+        });
+        };
+
+        const logIn = (user) => {
+            if(user.admin === true) {
+                console.log("successfully logged in");
+            }else{
+                console.log("failed to login, please try again");
+            }
+        };
+
+        const userAdmin = async() => {
+            const result = await fetchUser();
+            console.log(result);
+            logIn(result.data);
+        };
+
+        userAdmin();
+        console.log("program complete");
+    </script>
+</body>
+</html>
+
+<!-- 1. Create a function called "fetchUser" that returns 
+       a Promise that resolves with the value :
+       { data: {user: "Monkey", admin: true} } after 3 seconds
+    2. Create a function called "login" that takes an Object
+       as an argument. If the object has a property called 
+       "admin" with a value of true, then log out
+       "Successfully logged in!", otherwise log out
+       "Failed to log in, please try again."
+
+    3. Print out "Program starting..."
+    
+    4. Create an async function that uses await to wait for
+       the data to comes back from "fetchUser".
+    
+    5. Pass the user that comes back from "fetchUser" to the
+       "login" function you created above
+
+    6. Call the async function you created
+    7. Log out "Program complete!"-->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise1 = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve(10);
+            }, 2000);
+        });
+
+        const promise2 = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve(20);
+            },2000);
+        });
+
+        Promise.all([promise1,promise2]).then((values) => {
+            const first = values[0];
+            const second = values[1];
+            console.log(values);
+            console.log(first + second);
+        })
+        console.log()
+    </script>
+</body>
+</html>
